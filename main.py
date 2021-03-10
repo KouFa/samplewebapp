@@ -2,6 +2,10 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+@app.route('/')
+def start():
+    return "Hello Wor-kable!"
+
 @app.route('/health')
 def healthCheck():
     return jsonify(
